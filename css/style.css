@@ -1,0 +1,687 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;   /* наследование свойства родителя */
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.header{
+  background-image: url(../img/bg-header.jpg);
+  min-height: 800px;                       
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header__top{
+  display: flex;
+  justify-content: space-between;
+  height: 100px; /* сумма margin-top 30px margin-bottom 30px и ширина самого контента 40px */
+  align-items: center; /* ровняет по центру заданного height: 100px; */
+}
+
+.menu__list{
+  display: flex;
+}
+.menu__list li + li{ /* свойство задается всем li кроме первой */
+  padding-left: 50px;
+}
+.header-btn .login{
+  padding-right: 44px;  
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.menu__list a{
+  opacity: 0.5;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.menu__list a:hover{
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.header-btn .sing-up{
+  text-transform: uppercase;
+  color: #250F8A;
+  font-weight: 600;
+  background-color: #ffffff;
+  padding: 8px 43px;  /* расширяет внутренний отступ увеличивая bg кнопки */
+  border-radius: 20px;
+}
+.header-slider {
+  padding-top: 111px;
+}
+.header-slider__item {
+}
+.header-slider__item-content {
+  display: flex;
+  justify-content: space-between;
+}
+.header-slider__item-info {
+  max-width: 506px;
+  color: #ffffff;  /* для всех дочерних элементов  */
+}
+.header-slider__title {
+font-weight: bold;
+font-size: 45px;
+line-height: 60px;
+margin-bottom: 10px;
+
+}
+.header-slider__descr {
+  font-size: 24px;
+  line-height: 55px;
+  margin-bottom: 60px;
+
+}
+.header-slider .header-slider__btn {   /* уточняем путь для лучшего примения браузером прописанных стилей*/
+font-weight: 600;
+font-size: 15px;
+line-height: 24px;
+text-transform: uppercase;
+color: #250F8A;
+padding: 13px 39px;
+background: #FFCA00;
+border-radius: 25px;
+}
+.header-slider__item-img {
+  margin: 10px 82px 0 0;
+}
+.header-dots{
+  position: absolute;  /* к родительскому блоку не нужно применять position: relative, т.к. стоит дефолтно */
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); /* элемент всегда будет располагаться по центру */
+}
+.header-dots button{
+  border: none;
+  background-color: #ffffff;
+  opacity: 0.5;
+  font-size: 0;
+  padding: 0;   
+  width: 7px;
+  height: 7px;
+  -webkit-border-radius: 3.5px; /*border-radius нужно писать с префиксами  */
+  -moz-border-radius: 3.5px;
+  border-radius: 3.5px;
+  outline: none; /*убирате обвотку у активных элемнтов */
+  display: block;
+  margin: 10px auto;  
+}
+.header-dots .slick-active button{
+  width: 15px;
+  opacity: 1;
+}
+
+.specialised {
+  background-image: url(../img/section-bg.svg);
+  min-height: 425px; 
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.container {
+}
+
+.specialised__title, title {
+  padding-top: 55px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 45px;
+  color: #202020;
+}
+.specialised__item {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */ 
+  padding: 0 100px;
+}
+.specialised__item-one {
+  padding-top: 96px;
+  width: 280px;
+
+}
+.specialised__img {
+}
+.specialised__text {
+  padding-top: 23px;
+}
+.specialised__text-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+.specialised__text-descr {
+  padding-top: 10px;
+  font-size: 15px;
+line-height: 24px;
+text-align: center;
+color: #272727;
+opacity: 0.7;
+}
+
+.advantages {
+  background-color: #F4F9FD; 
+  padding-top: 65px;  
+  background-image: url(../img/section-bg-2.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.container {
+}
+.advantages-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 65px;      /* если margin задется блоку с фоном, то margin сработает без фона, потому задается padding */
+
+}
+.revers{     /* если класс с идетификатором,то обращаемся индентификатору */
+  flex-direction: row-reverse
+}
+.advantages-box__text {
+  max-width: 455px; /* задаем ширину блоку */
+  padding-top: 30px;
+  background-image: url(../img/advantages-text-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 24px 0px;  /* задает фиксированное положение элементу */
+
+}
+.advantages-box--rigth .advantages-box__text{
+  background-image: url(../img/advantages-text-bg-2.svg);
+  
+  background-position: 24px 0px;  /* задает фиксированное положение элементу */
+
+}
+.advantages-box--3{
+
+}
+.advantages-box--3 .advantages-box__text{
+  background-image: url(../img/advantages-text-bg-3.svg);
+  
+  background-position: 24px 0px;  /* задает фиксированное положение элементу */
+}
+.advantages-box__title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 45px;
+  padding-bottom: 15px;
+  padding-left: 48px;
+  color: #202020;
+}
+.advantages-box__description {
+  color: #272727;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  padding-left: 48px;
+  
+}
+
+.advantages-box__description-p{
+  padding-top: 35px;
+}
+.advantages-box__img-one {
+
+}
+.reviwe {
+}
+.container {
+}
+.reviwe__title {
+  font-family: Source Sans Pro;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 45px;
+  width: 384px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+
+color: #FFFFFF;
+}
+.reviwe-sectuion{
+  background-image: url(../img/end_section_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 82px;
+
+}
+.reviwe__items {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 55px;
+
+}
+.reviwe__item {
+  width: 300px;
+  padding: 35px 24px;
+  background-color: rgba(255, 255, 255, .2); /* если использовать opaciti вместо rgba, прозрачным будет и текста */
+  
+}
+.reviwe__item-title {
+  display: flex;
+  justify-content: space-between;
+
+}
+.reviwe__item-title-img {
+  
+}
+.reviwe__item-title-img-1 {
+  border-radius: 50%;     /* обрезает края квадратной картинки .jpg и делает ее круглой */
+}
+.reviwe__item-title-text {
+}
+.reviwe__item-title-text-part-1 {
+
+font-weight: 600;
+font-size: 15px;
+line-height: 24px;
+color: #FFFFFF;
+
+}
+.reviwe__item-title-text-part-2 {
+font-size: 15px;
+line-height: 24px;
+color: #FFFFFF;
+opacity: 0.5;
+}
+.reviwe__item-text {
+  font-family: Source Sans Pro;
+font-size: 15px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+padding-top: 40px;
+position: relative;
+}
+.reviwe__item-text::before{
+content: '“';   
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 55px;
+color: #FFFFFF;
+position: absolute;
+top: 0;     /* псевдоэлементу указывается позиция */
+left: 0;
+right: 0;             
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+.link {
+font-size: 15px;
+line-height: 24px;
+
+text-align: center;
+
+color: #272727;
+}
+.footer__link-link {
+  margin-right: 30px;
+}
+.footer__end {
+  font-size: 15px;
+line-height: 24px;
+}
+
+@media (max-width: 1200px){
+  .advantages{
+    background-size: 180px;  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1190px){
+  .slick-slide img{
+    display: block;
+    width: 80%;
+    margin: 0px 0px 0 90px;
+    }
+    
+    .advantages-box__img-one{
+      
+      text-align: center;
+    }
+    .advantages-box__img-jpeg{
+     
+      width: 80%;
+     
+    }
+    .advantages-box{
+      justify-content: space-around;
+    }
+    .header-slider__item-img{
+      margin: 10px 20px 0 0;
+    }
+    .header-slider__item-info{
+      padding: 50px 0;
+    }
+    .specialised { 
+      background-size: 150px;
+}
+}
+
+
+@media (max-width: 970px){ 
+.specialised__item{
+  flex-wrap: wrap;
+  text-align: center;
+
+
+}
+.specialised__item-one{
+  width: 50%;
+}
+.description-text{
+  padding-left: 20px;
+    
+  }
+.title-rigth{
+padding-left: 20px;
+  
+}
+.text-rigth{
+  padding-right: 20px;
+}
+.advantages-box__description-p{
+padding-top: 14px;
+} 
+
+.advantages {
+  padding-top: 40px;
+ }
+ .advantages-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 39px;
+  }
+
+}
+
+
+
+@media (max-width: 924px){
+  .header__top{
+    flex-wrap: wrap;
+  }
+
+    .header-btn{
+      width: 100%;
+      text-align: right;
+    }
+    .login{
+      padding-right: 20px;
+    }
+    .reviwe__items{
+      flex-wrap: wrap;
+    
+    }
+    .reviwe__item{
+      width: 49.4%;
+    }
+    .top-one{
+      margin-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 900px){
+  .slick-slide img{
+    display: none; 
+  }
+
+  .header-slider__item-info{
+    padding: 17px 0;
+  }
+
+  .specialised {
+  background-image: none; 
+}
+
+  .advantages{
+    background-image: none;}
+  .specialised__item-one{
+  width: 100%;
+    }
+
+}
+
+
+
+@media (max-width: 775px){
+
+  .specialised__item-one {
+    padding-top: 28px;
+    width: 100%;}
+  .specialised__title, title{
+      padding-top: 24px;
+    }
+}
+@media (max-width: 728px){
+.advantages-box{
+  flex-wrap: wrap;
+
+}
+.advantages-box--rigth{
+flex-direction: column-reverse;
+}
+.revers{ 
+  flex-direction: column-reverse;
+}
+.advantages-box__text{
+max-width: 100%;
+}
+.advantages-box__img-jpeg {
+  width: 100%;
+}
+
+}
+@media (max-width: 570px){
+  .menu__list{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 120px;
+    width: 100%;
+    text-align: center;
+    background-color: #1c4ba7;  /* фон для меню */
+    z-index: 5; /* чтобы выпадающее меню было видно над слайдером */
+  }
+  .advantages-box__description{
+    padding-left: 15px;
+  }
+  .advantages-box__title{
+    padding-left: 15px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .menu__list li + li{
+    padding-left: 0;
+  }
+  .menu__list a{
+    display: block; /*  ссылка на всю ширину  */
+    padding: 10px 0;/* увеличение высоты ссылки */
+  }
+  .menu__btn{
+    width: 30px;
+    height: 20px;
+    position: relative;
+  }
+.menu__btn span{
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  top: 9px;
+  position: absolute;
+}
+.menu__btn::after,
+.menu__btn::before{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  position: absolute;
+}
+.menu__btn::after{
+  top: 0;
+}
+.menu__btn::before{
+  bottom: 0;
+}
+
+.header{
+  min-height: 580px;
+}
+.header-slider {
+  padding-top: 0px;
+}
+.header-slider__title {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 40px;
+  margin-bottom: 0px;}
+
+  .header-slider__descr {
+    font-size: 24px;
+    line-height: 55px;
+    margin-bottom: 24px;
+}
+.reviwe__item{
+  width: 100%;
+}
+.top-two{
+  margin-top: 10px;
+}
+.specialised__item
+{padding: 0 15px;}
+
+.reviwe__items{
+  display: block;
+  padding-top: 20px;
+}
+.footer__link-link {
+  margin-right: 10px;
+}
+}
+
+@media (min-width: 570px){
+  .menu__list{
+  display: flex !important; /* высокая степень приоритета */
+}
+}
+
+	@media (max-width: 474px){
+  .footer__wrapper{
+    display: block;
+    padding: 10px 0px; 
+  }
+  .link{
+    line-height: 16px;
+  }
+  .footer__end{
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 475px){
+  .specialised__item{
+   padding: 0 24px;}
+  }
+  .reviwe__title {
+    font-size: 24px;
+    line-height: 20px;
+    width: 300px;
+}
+}
